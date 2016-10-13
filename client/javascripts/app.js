@@ -475,61 +475,23 @@ mockFitData = {
     ]
 };
 
-    var test = ChartistPlus.Histogram(
-        '#chart',
-        {
-            series: [
-                mockHistogramData,
-                mockHistogramData2
-            ],
-            xAxisLabel: 'test',
-            yAxisLabel: 'ytest',
-        },
-        {
-            // high: 20,
-            // low: 10
-            // plugins:
-            //     [
-            //         Chartist.plugins.ctAxisTitle({
-            //     axisX: {
-            //         axisTitle: 'TEST',
-            //         axisClass: 'ct-axis-title',
-            //         offset: {
-            //             x: 0,
-            //             y: 30
-            //         },
-            //         textAnchor: 'middle'
-            //     },
-            //     axisY: {
-            //         axisTitle: data.yAxisLabel || '',
-            //         axisClass: 'ct-axis-title',
-            //         offset: {
-            //             x: 0,
-            //             y: 10
-            //         },
-            //         textAnchor: 'middle',
-            //         flipTitle: true
-            //     }
-            //     })],
-            // chartPadding: {
-            //     top: 15,
-            //     right: 15,
-            //     bottom: 15,
-            //     left: 10
-            // },
-        }
-    );
-    // new ChartistPlus.Line(
-    //     '#chart',
-    //     {
-    //         series: [mockFitData.y]
-    //     }
-    //     // plot.options
-    // );
-
-// Create a new line chart object where as first parameter we pass in a selector
-// that is resolving to our chart container element. The Second parameter
-// is the actual data object.
-// new ChartistPlus.Bar('.ct-chart', data);
-console.log('tesst');
-console.log(test);
+var chart1 = ChartistPlus.Histogram(
+    '#chart1',
+    {
+        series: [
+            mockHistogramData,
+            mockHistogramData2
+        ],
+        xAxisLabel: 'Counts [#/cc]',
+        yAxisLabel: 'Voltage [V]',
+    });
+var chart2 = ChartistPlus.Scatter(
+    '#chart2',
+    {
+        series: [
+            mockHistogramData,
+            mockHistogramData2
+        ],
+        xAxisLabel: 'Counts [#/cc]',
+        yAxisLabel: 'Voltage [V]',
+    });
